@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+	<tr>
+		<th>文件下载</th>
+		<td th:text="${msg}" colspan="3">welcom</td>
+	</tr>
+	<tr  th:each="re : ${result}">
+		<td th:text="${re.name}"></td>
+		<td th:text="${re.date}"></td>
+		<th th:text=${re.remarks}></th>
+		<td><a th:href="@{'/download/'+${re.id}}">下载</a></td>
+	</tr>
+	
+</table>
+</body>
+</html>
